@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">My Demo App</string>
+
+    <string name="admob_banner_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="admob_openads">ca-app-pub-3940256099942544/9257395921</string>
+    <string name="admob_interstitial">ca-app-pub-3940256099942544/1033173712</string>
+</resources>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:padding="16dp" >
+
+    <!-- Search Bar -->
+    <EditText
+        android:id="@+id/etSearch"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Search"
+        android:drawableStart="@drawable/ic_search"
+        android:background="@drawable/bg_edittext"
+        android:padding="10dp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Status Counters -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:weightSum="3"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="70dp"
+            android:gravity="center"
+            android:background="@drawable/bg_counter"
+            android:text="2\nPending"
+            android:textAlignment="center"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="70dp"
+            android:gravity="center"
+            android:background="@drawable/bg_counter"
+            android:layout_marginHorizontal="8dp"
+            android:text="2\nIn Progress"
+            android:textAlignment="center"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="70dp"
+            android:gravity="center"
+            android:background="@drawable/bg_counter"
+            android:text="0\nCompleted"
+            android:textAlignment="center"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <!-- New Order Button -->
+    <Button
+        android:id="@+id/btnNewOrder"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="NEW ORDER"
+        android:textAllCaps="true"
+        android:background="@drawable/bg_button"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- All Orders -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="All Orders"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_marginBottom="8dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Order Card 1 -->
+            <include layout="@layout/item_order"/>
+
+            <!-- Order Card 2 -->
+            <include layout="@layout/item_order"/>
+
+            <!-- Order Card 3 -->
+            <include layout="@layout/item_order"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
